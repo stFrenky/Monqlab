@@ -1,0 +1,21 @@
+:root {
+	$darkGrey: #B0B5BD;
+	$lightGrey: #F8F8F8;
+	$blue: #2A75DB;
+	$darkBlue: #205EB0;
+	$black: #0B0A0A;
+	$lightBeige: #DFDADA;
+	$mediumBeige: #887C7C;
+	$darkBeige: #585050;
+
+
+
+	--bg: #{$darkGrey};
+	--inner-bg: #{$lightGrey};
+	--dis-el: #{$blue};
+	--dis-el-bold: #{$darkBlue};
+	--fs-color: #{$black};
+	--dis-el-bg: #{$lightBeige};
+	--dis-el-border: #{$mediumGrey};
+	--fs-color-lt: #{$darkGrey};
+}

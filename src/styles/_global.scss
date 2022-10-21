@@ -92,14 +92,17 @@ a {
 [class*="__container"] {
 	max-width: 1024px;
 	margin: 0 auto;
-	background-color: #F8F8F8;
+	background-color: var(--inner-bg);
 }
 
 //-------------------RESET-STYLES-END-------------------------
 //-------------------GLOBAL-STYLES-END------------------------
+#Theme {
+	align-items: flex-start;
+}
 
 .preferences {
-	background-color: #B0B5BD;
+	background-color: var(--bg);
 
 	&__top-box {
 		padding: 32px;
@@ -117,8 +120,7 @@ a {
 		font-size: 28px;
 		line-height: 32px;
 		margin-bottom: 5px;
-
-		color: #0B0A0A;
+		color: var(--fs-color);
 	}
 
 	&__subtitle {
@@ -126,7 +128,6 @@ a {
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
-
 		color: #585050;
 	}
 
@@ -156,7 +157,6 @@ a {
 		&::after {
 			left: 67.5%;
 			top: calc(-50%);
-
 		}
 	}
 
@@ -166,7 +166,6 @@ a {
 		background: #DFDADA;
 		border: 1px solid #887C7C;
 		border-radius: 6px;
-
 		font-size: 14px;
 		line-height: 16px;
 		color: #0B0A0A;
@@ -195,7 +194,6 @@ a {
 			border: 1px solid #887C7C;
 			border-radius: 6px;
 			cursor: pointer;
-
 			font-size: 14px;
 			line-height: 16px;
 			color: #0B0A0A;
@@ -207,12 +205,9 @@ a {
 			border: 1px solid #2A75DB;
 		}
 
-
 		select {
 			-webkit-appearance: none;
 			appearance: none;
-
-
 		}
 
 		&>label {
@@ -233,7 +228,6 @@ a {
 		background: url('../images/arrow.svg');
 		width: 12px;
 		height: 8px;
-
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -244,7 +238,6 @@ a {
 	&__form-arrow.active {
 		transform: rotate(180deg);
 		top: calc(50% - 4px);
-
 	}
 
 	&__dropdown {
@@ -270,7 +263,6 @@ a {
 		left: 0;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		z-index: 2;
-
 	}
 
 	&__dropdown-list.active {
@@ -284,7 +276,6 @@ a {
 		align-items: center;
 		padding: 8px;
 		cursor: pointer;
-
 
 		&:first-child {
 			border-radius: 6px 6px 0 0 !important;
@@ -318,9 +309,11 @@ a {
 			font-size: 14px;
 			line-height: 24px;
 			color: #585050;
+			cursor: pointer;
 		}
 
 		label::before {
+			cursor: pointer;
 			content: '';
 			display: block;
 			width: 18px;
@@ -333,11 +326,11 @@ a {
 			transform: translateY(-50%);
 			left: 0;
 			z-index: 1;
-
 			transition: opacity .1s linear;
 		}
 
 		label::after {
+			cursor: pointer;
 			content: "";
 			display: block;
 			width: 10px;
@@ -350,9 +343,7 @@ a {
 			left: 4px;
 			z-index: 2;
 			opacity: 0;
-
 			transition: opacity .1s linear;
-
 		}
 
 		input {
@@ -416,7 +407,6 @@ a {
 		&-cancle:active {
 			border: 1px solid #2A75DB;
 			background: #F8F8F8 !important;
-
 		}
 
 		&-cancle:hover {
@@ -434,20 +424,14 @@ a {
 	}
 
 	&__copyrate {
+		font-family: 'Montserrat-Regular';
 		font-size: 14px;
 		line-height: 20px;
 
-		span {
+		a {
 			line-height: 17px;
 			color: #205EB0;
 			margin: 0 4px;
 		}
 	}
-
-}
-
-
-
-#Theme {
-	align-items: flex-start;
 }

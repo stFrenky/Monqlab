@@ -18,9 +18,6 @@ import './styles/index.scss';
 // hamburgerBtn.addEventListener('click', openMenu);
 
 
-
-
-
 document.querySelectorAll('.preferences__dropdown').forEach(function (dropDownWrapper) {
 
 	const dropDownBtn = dropDownWrapper.querySelector('.preferences__dropdown-btn');
