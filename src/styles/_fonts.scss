@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold.woff') format('woff');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Roboto-Black';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold.woff') format('woff');
+	font-style: normal;
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'Helioscond-Bold';
+	src: url('../fonts/Helioscond-Bold.woff2') format('woff2'),
+		url('../fonts/Helioscond-Bold.woff') format('woff');
+	font-style: normal;
+	font-weight: 700;
+}
