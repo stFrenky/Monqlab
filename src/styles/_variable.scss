@@ -1,0 +1,51 @@
+	$gray: #B0B5BD;
+	$lightGray: #F8F8F8;
+	$blue: #2A75DB;
+	$darkBlue: #205EB0;
+	$black: #0B0A0A;
+	$liteBeige: #DFDADA;
+	$mediumBeige: #887C7C;
+	$darkBeige: #585050;
+	$liteBlue: #AAC9F1;
+	$liteblack: #1E1D1D;
+	$darkGray: #424242;
+	$darkGrayLite: #5a5a5a;
+	$liteBluePlus: #AAC9F1;
+	$white: #F3F3F3;
+	$whiteBlue: #F0F6FF;
+
+
+
+	//while
+	html[data-theme="light"] {
+		--bg: #{$gray};
+		--inner-bg: #{$lightGray};
+		--dis-el: #{$blue};
+		--dis-el-bold: #{$darkBlue};
+		--fs-color: #{$black};
+		--dis-el-bg: #{$liteBeige};
+		--dis-el-border: #{$mediumBeige};
+		--fs-color-lt: #{$darkBeige};
+		--dis-el-lt: #{$liteBlue};
+		--white-blk: #{$lightGray};
+		--white-gry: #{$lightGray};
+		--while-gry-b: #{$liteBeige};
+	}
+
+
+	//dark
+	html[data-theme="Dark"] {
+
+		--bg: #{$black};
+		--inner-bg: #{$liteblack};
+		--dis-el: #{$liteBlue};
+		--dis-el-bold: #{$liteBluePlus};
+		--fs-color: #{$white};
+		--dis-el-bg: #{$darkBeige};
+		--dis-el-border: #{$mediumBeige};
+		--fs-color-lt: #{$liteBeige};
+		--dis-el-lt: #{$whiteBlue};
+		--white-blk: #{$black};
+		--white-gry: #{$darkGray};
+		--while-gry-b: #{$darkGrayLite};
+	}

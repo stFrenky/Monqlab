@@ -97,6 +97,8 @@ a {
 
 //-------------------RESET-STYLES-END-------------------------
 //-------------------GLOBAL-STYLES-END------------------------
+
+
 #Theme {
 	align-items: flex-start;
 }
@@ -128,7 +130,7 @@ a {
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
-		color: #585050;
+		color: var(--fs-color-lt);
 	}
 
 	&__form {
@@ -148,7 +150,7 @@ a {
 			display: block;
 			width: 4px;
 			height: 1px;
-			background: #585050;
+			background: var(--fs-color-lt);
 			position: relative;
 			top: calc(50%);
 			left: 30.5%;
@@ -163,12 +165,12 @@ a {
 	&__input-personal-code {
 		cursor: pointer;
 		padding: 8px;
-		background: #DFDADA;
-		border: 1px solid #887C7C;
+		background: var(--dis-el-bg);
+		border: 1px solid var(--dis-el-border);
 		border-radius: 6px;
 		font-size: 14px;
 		line-height: 16px;
-		color: #0B0A0A;
+		color: var(--fs-color);
 		width: 52px;
 		height: 32px;
 
@@ -190,19 +192,19 @@ a {
 			padding: 8px;
 			width: 196px;
 			height: 32px;
-			background: #DFDADA;
-			border: 1px solid #887C7C;
+			background: var(--dis-el-bg);
+			border: 1px solid var(--dis-el-border);
 			border-radius: 6px;
 			cursor: pointer;
 			font-size: 14px;
 			line-height: 16px;
-			color: #0B0A0A;
+			color: var(--fs-color);
 		}
 
 		.preferences__input-personal-code:focus,
 		&>input:focus,
 		select:focus {
-			border: 1px solid #2A75DB;
+			border: 1px solid var(--dis-el);
 		}
 
 		select {
@@ -216,7 +218,7 @@ a {
 			font-size: 14px;
 			line-height: 16px;
 			align-items: center;
-			color: #585050;
+			color: var(--fs-color-lt);
 		}
 
 		&-select {
@@ -250,13 +252,13 @@ a {
 	}
 
 	&__dropdown-btn.active {
-		border: 1px solid #2A75DB;
+		border: 1px solid var(--dis-el);
 	}
 
 	&__dropdown-list {
 		display: none;
 		position: absolute;
-		background: #F8F8F8;
+		background: var(--inner-bg);
 		width: 196px;
 		border-radius: 6px;
 		top: 33px;
@@ -276,6 +278,8 @@ a {
 		align-items: center;
 		padding: 8px;
 		cursor: pointer;
+		background: var(--white-gry);
+		color: var(--fs-color-lt);
 
 		&:first-child {
 			border-radius: 6px 6px 0 0 !important;
@@ -293,7 +297,7 @@ a {
 	}
 
 	&__dropdown-item:hover {
-		background: #DFDADA;
+		background: var(--dis-el-bg);
 	}
 
 	&__radio-box {
@@ -308,7 +312,7 @@ a {
 		label {
 			font-size: 14px;
 			line-height: 24px;
-			color: #585050;
+			color: var(--fs-color-lt);
 			cursor: pointer;
 		}
 
@@ -318,8 +322,8 @@ a {
 			display: block;
 			width: 18px;
 			height: 18px;
-			background-color: #fff;
-			border: 2px solid #585050;
+			background-color: var(--inner-bg);
+			border: 2px solid var(--fs-color-lt);
 			border-radius: 50%;
 			position: absolute;
 			top: 50%;
@@ -335,7 +339,7 @@ a {
 			display: block;
 			width: 10px;
 			height: 10px;
-			background-color: #2A75DB;
+			background-color: var(--dis-el);
 			border-radius: 50%;
 			position: absolute;
 			top: 50%;
@@ -353,11 +357,11 @@ a {
 		}
 
 		input:checked+label {
-			color: #0B0A0A;
+			color: var(--fs-color);
 		}
 
 		input:checked+label::before {
-			border: 2px solid #2A75DB;
+			border: 2px solid var(--dis-el);
 		}
 
 		input:checked+label::after {
@@ -382,35 +386,37 @@ a {
 		border-radius: 3px;
 
 		&-apply {
-			background: #2A75DB;
+			background: var(--dis-el);
 			border-radius: 3px;
 			margin-right: 15px;
-			color: #F8F8F8;
-			border: 1px solid #F8F8F8;
+			color: var(--white-blk);
+			border: 1px solid var(--inner-bg);
+			cursor: pointer;
 		}
 
 		&-apply:active {
-			border: 1px solid #AAC9F1;
+			color: var(--bg);
+			border: 1px solid var(--dis-el-lt);
 		}
 
 		&-apply:hover {
-			background: #205EB0;
-			color: #F8F8F8;
+			background: var(--dis-el-bold);
+			color: var(--inner-bg);
 		}
 
 		&-cancle {
-			color: #205EB0;
-			border: 1px solid #F8F8F8;
-			background: #F8F8F8;
+			color: var(--dis-el-bold);
+			border: 1px solid var(--inner-bg);
+			background: var(--white-gry);
+			cursor: pointer;
 		}
 
 		&-cancle:active {
-			border: 1px solid #2A75DB;
-			background: #F8F8F8 !important;
+			border: 1px solid var(--dis-el);
 		}
 
 		&-cancle:hover {
-			background: #B0B5BD;
+			background: var(--while-gry-b);
 		}
 	}
 
@@ -427,10 +433,11 @@ a {
 		font-family: 'Montserrat-Regular';
 		font-size: 14px;
 		line-height: 20px;
+		color: var(--fs-color-lt);
 
 		a {
 			line-height: 17px;
-			color: #205EB0;
+			color: var(--dis-el-bold);
 			margin: 0 4px;
 		}
 	}
