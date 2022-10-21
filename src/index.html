@@ -13,14 +13,68 @@
 	<main class="page">
 		<div class="preferences">
 			<div class="preferences__container">
-				<div class="preferences__title-box">
-					<div class="preferences__title"></div>
-					<div class="preferences__subtitle"></div>
+				<div class="preferences__top-box">
+					<div class="preferences__title-box">
+						<div class="preferences__title">Preferences</div>
+						<div class="preferences__subtitle">On this page you can configure the main system parameters available
+							for customization</div>
+					</div>
+					<form class="preferences__form">
+						<div class="preferences__form-item">
+							<label for="Company Title">Company Title</label>
+							<input type="text" name="Company Title">
+						</div>
+						<div class="preferences__form-item">
+							<label for="First Day">First Day</label>
+							<select name="First Day">
+								<option value="Monaday">Monday</option>
+								<option value="Sunday">Sunday</option>
+								<option value="System">System</option>
+							</select>
+						</div>
+						<div class="preferences__form-item">
+							<label for="Container Width">Container Width</label>
+							<select name="Container Width">
+								<option value="Fixed">Fixed</option>
+								<option value="Static">Static</option>
+							</select>
+						</div>
+						<div class="preferences__form-item">
+							<label for="Homepage">Homepage</label>
+							<select name="Homepage">
+								<option value="Starre Projects">Starre Projects</option>
+								<option value="Starre Projects">Starre Projects</option>
+								<option value="Starre Projects">Starre Projects</option>
+							</select>
+						</div>
+						<div class="preferences__form-item">
+							<label for="Indent Size">Indent Size</label>
+							<input type="number" name="Indent Size">
+						</div>
+						<div class="preferences__form-item">
+							<label for="Personal Code">Personal Code</label>
+							<input type="number" name="Personal Code">
+						</div>
+						<div class="preferences__form-item">
+							<label for="Theme" id="Theme">Theme</label>
+							<div class="preferences__form-item-inner-box">
+								<p><input checked type="radio" name="Theme"> Light</p>
+								<p><input type="radio" name="Theme"> Dark</p>
+							</div>
+						</div>
+						<div class="preferences__form-btn-box">
+							<button class="preferences__form-btn preferences__form-btn-apply">Apply and Save</button>
+							<button class="preferences__form-btn preferences__form-btn-cancle">Cancel</button>
+						</div>
+					</form>
 				</div>
-				<div class="preferences__form">
-
-
-
+				<div class="preferences__bottom-box">
+					<div class="preferences__COPY">
+						2020-2022
+						<span> Terms of Service</span>
+						and
+						<span> Conditions</span>
+					</div>
 				</div>
 			</div>
 		</div>
