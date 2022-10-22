@@ -227,9 +227,7 @@ a {
 	}
 
 	&__form-arrow {
-		background: url('../images/arrow.svg');
 		width: 12px;
-		height: 8px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -239,7 +237,11 @@ a {
 
 	&__form-arrow.active {
 		transform: rotate(180deg);
-		top: calc(50% - 4px);
+		top: calc(50% - 10px);
+
+		path {
+			fill: var(--dis-el);
+		}
 	}
 
 	&__dropdown {

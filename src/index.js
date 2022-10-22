@@ -17,7 +17,7 @@ import './styles/index.scss';
 
 // hamburgerBtn.addEventListener('click', openMenu);
 
-
+//Кастомный dropDown
 document.querySelectorAll('.preferences__dropdown').forEach(function (dropDownWrapper) {
 
 	const dropDownBtn = dropDownWrapper.querySelector('.preferences__dropdown-btn');
@@ -61,6 +61,16 @@ document.querySelectorAll('.preferences__dropdown').forEach(function (dropDownWr
 	});
 });
 
+//
+
+const darkChecked = document.getElementById('dark');
+const lightChecked = document.getElementById('light');
+const htmlAtr = document.body.getAttribute('html');
+
+
+if (darkChecked.checked) {
+
+}
 
 
 
