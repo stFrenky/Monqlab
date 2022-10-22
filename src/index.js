@@ -65,12 +65,27 @@ document.querySelectorAll('.preferences__dropdown').forEach(function (dropDownWr
 
 const darkChecked = document.getElementById('dark');
 const lightChecked = document.getElementById('light');
-const htmlAtr = document.body.getAttribute('html');
+const htmlTg = document.querySelector('html');
 
 
-if (darkChecked.checked) {
 
-}
+darkChecked.addEventListener('change', function () {
+	htmlTg.removeAttribute('data-theme', 'light');
+	htmlTg.setAttribute('data-theme', 'dark');
+});
 
+lightChecked.addEventListener('change', function () {
+	htmlTg.removeAttribute('data-theme', 'dark');
+	htmlTg.setAttribute('data-theme', 'light');
+});
+
+// darkChecked.addEventListener('change', toggleAtr)
+// lightChecked.addEventListener('change', toggleAtr)
+
+
+// function toggleAtr() {
+// 	htmlTg.removeAttribute('data-theme', 'dark');
+// 	htmlTg.setAttribute('data-theme', 'light');
+// }
 
 
