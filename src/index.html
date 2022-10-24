@@ -22,7 +22,7 @@
 					<form class="preferences__form">
 						<div class="preferences__form-item">
 							<label for="Company Title">Company Title</label>
-							<input type="text" name="Company Title" placeholder="Default">
+							<input type="text" name="companyTitle" placeholder="Default">
 						</div>
 						<div class="preferences__form-item preferences__form-item-select">
 							<label>First Day</label>
@@ -34,16 +34,24 @@
 											fill="#887C7C" />
 									</svg>
 								</div>
-								<div class="preferences__dropdown-btn">Monday</div>
+								<button name='company' type="button" class="preferences__dropdown-btn">Monday</button>
 								<ul class="preferences__dropdown-list">
-									<li class="preferences__dropdown-item" data-value="Monday">Monday</li>
-									<li class="preferences__dropdown-item" data-value="Sunday">Sunday</li>
-									<li class="preferences__dropdown-item" data-value="System">System</li>
+									<li class="preferences__dropdown-item" data-value="monday">Monday</li>
+									<li class="preferences__dropdown-item" data-value="sunday">Sunday</li>
+									<li class="preferences__dropdown-item" data-value="system">System</li>
 								</ul>
+								<!-- <div class="preferences__select">
+									<select name="firstDay">
+										<option name="firstDay0" value="0">Monday</option>
+										<option name="firstDay1" value="1">Monday</option>
+										<option name="firstDay2" value="2">Sunday</option>
+										<option name="firstDay3" value="3">System</option>
+									</select>
+								</div> -->
 							</div>
 						</div>
 						<div class="preferences__form-item preferences__form-item-select">
-							<label for="Container Width">Container Width</label>
+							<label for="containerWidth">Container Width</label>
 							<div class="preferences__dropdown">
 								<div class="preferences__form-arrow">
 									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
@@ -52,15 +60,22 @@
 											fill="#887C7C" />
 									</svg>
 								</div>
-								<div class="preferences__dropdown-btn">Fixed</div>
+								<!-- <div class="preferences__select">
+									<select name="containerWidth">
+										<option name="containerWidth0" value="0">Fixed</option>
+										<option name="containerWidth1" value="1">Fixed</option>
+										<option name="containerWidth2" value="2">Static</option>
+									</select>
+								</div> -->
+								<button name='fixed' type="button" class="preferences__dropdown-btn">Fixed</button>
 								<ul class="preferences__dropdown-list">
-									<li class="preferences__dropdown-item" data-value="Monday">Fixed</li>
-									<li class="preferences__dropdown-item" data-value="Sunday">Static</li>
+									<li class="preferences__dropdown-item" data-value="fixed">Fixed</li>
+									<li class="preferences__dropdown-item" data-value="static">Static</li>
 								</ul>
 							</div>
 						</div>
 						<div class="preferences__form-item preferences__form-item-select">
-							<label for="Homepage">Homepage</label>
+							<label for="homepage">Homepage</label>
 							<div class="preferences__dropdown">
 								<div class="preferences__form-arrow">
 									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
@@ -69,41 +84,49 @@
 											fill="#887C7C" />
 									</svg>
 								</div>
-								<div class="preferences__dropdown-btn">Starre Projects</div>
+								<!-- <div class="preferences__select">
+									<select name="homepage">
+										<option name="homepage0" value="0">Starre Projects</option>
+										<option name="homepage1" value="1">Starre Projects</option>
+										<option name="homepage2" value="2">Starre Projects#2</option>
+									</select>
+								</div> -->
+								<button name="starre" type="button" class="preferences__dropdown-btn">Starre Projects</button>
 								<ul class="preferences__dropdown-list">
-									<li class="preferences__dropdown-item" data-value="Monday">Starre Projects</li>
-									<li class="preferences__dropdown-item" data-value="Sunday">Starre Projects#2</li>
+									<li class="preferences__dropdown-item" data-value="starre1">Starre Projects</li>
+									<li class="preferences__dropdown-item" data-value="starre2">Starre Projects#2</li>
 								</ul>
 							</div>
 						</div>
 						<div class="preferences__form-item">
 							<label for="Indent Size">Indent Size</label>
-							<input type="number" name="Indent Size" placeholder="Default">
+							<input type="number" name="indentSize" placeholder="Default">
 						</div>
 						<div class="preferences__form-item">
-							<label for="Personal Code">Personal Code</label>
+							<label for="personalCode">Personal Code</label>
 							<div class="preferences__input-personal-code-box">
-								<input type="number" name="Personal Code" class="preferences__input-personal-code">
-								<input type="number" name="Personal Code" class="preferences__input-personal-code">
-								<input type=" number" name="Personal Code" class="preferences__input-personal-code">
+								<input type="number" name="personalCode1" class="preferences__input-personal-code">
+								<input type="number" name="personalCode2" class="preferences__input-personal-code">
+								<input type="number" name="personalCode3" class="preferences__input-personal-code">
 							</div>
 						</div>
 						<div class=" preferences__form-item">
 							<label for="Theme" id="Theme">Theme</label>
 							<div class="preferences__form-item-inner-box">
 								<div class="preferences__radio-box">
-									<input checked type="radio" name="Theme" id="light" value="light">
+									<input type="radio" name="theme" id="light" value="light">
 									<label for="light">Light</label>
 								</div>
 								<div class="preferences__radio-box">
-									<input type="radio" name="Theme" id="dark" value="dark">
+									<input type="radio" name="theme" id="dark" value="dark">
 									<label for="dark">Dark</label>
 								</div>
 							</div>
 						</div>
 						<div class="preferences__form-btn-box">
-							<button class="preferences__form-btn preferences__form-btn-apply">Apply and Save</button>
-							<button class="preferences__form-btn preferences__form-btn-cancle">Cancel</button>
+							<button type="submit" class="preferences__form-btn preferences__form-btn-apply">Apply and
+								Save</button>
+							<button type="button" class="preferences__form-btn preferences__form-btn-cancle">Cancel</button>
 						</div>
 					</form>
 				</div>

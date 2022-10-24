@@ -1,23 +1,92 @@
+import { getAttributeValue } from 'domutils';
 import './styles/index.scss';
 
 
-// const hamburgerBtn = document.querySelector('.header__hamburger-btn');
+//switch theme
+const form = document.querySelector('.preferences__form');
 
-// function toggleActiveClass(target) {
-// 	target.classList.toggle('active')
-// }
+const serializeForm = ({ elements }) => Array.from(elements).map(({ name, type, value, checked }) => {
 
-// function openMenu(e) {
-// 	const { currentTarget } = e;
-// 	const hamburgerMenu = document.querySelector('.header__menu-hamburger');
+	if (type === 'radio' && !checked) return false;
 
-// 	toggleActiveClass(currentTarget)
-// 	toggleActiveClass(hamburgerMenu)
-// }
+	return { name, value };
+}).filter((item) => !!item.name);
 
-// hamburgerBtn.addEventListener('click', openMenu);
+function saveItem({ name, value }) {
+	localStorage.setItem(name, value);
+}
 
-//Кастомный dropDown
+const getItem = name => localStorage.getItem(name);
+
+function saveData(data) {
+	data.forEach(item => {
+		saveItem(item);
+	});
+}
+
+function setTheme() {
+	const html = document.querySelector('html');
+
+	const theme = getItem('theme') ?? 'light';
+
+	html.dataset.theme = theme;
+}
+
+function setData(e) {
+	e.preventDefault();
+
+	const data = serializeForm(e.target);
+
+	saveData(data);
+
+	setTheme();
+}
+
+function getData() {
+	const names = ['companyTitle', 'indentSize', 'personalCode1', 'personalCode2', 'personalCode3', 'theme'];
+
+	return names.reduce((data, name) => {
+		const item = { name, value: getItem(name) };
+
+		data.push(item);
+
+		return data;
+	}, []);
+}
+
+function fillForm(data) {
+	data.forEach(({ name, value }) => {
+
+		const item = name === 'theme' ? document.querySelector(`[value = ${value}]`) : document.querySelector(`[name = ${name}]`);
+
+		if (item.type === 'radio') {
+
+			item.checked = true;
+		} else {
+			item.value = value;
+		}
+	});
+}
+
+function load() {
+	const data = getData();
+
+	setTheme();
+	fillForm(data);
+}
+
+
+form.addEventListener('submit', setData);
+document.addEventListener('DOMContentLoaded', load);
+
+
+
+
+
+
+
+//custom dropDown
+
 document.querySelectorAll('.preferences__dropdown').forEach(function (dropDownWrapper) {
 
 	const dropDownBtn = dropDownWrapper.querySelector('.preferences__dropdown-btn');
@@ -25,9 +94,25 @@ document.querySelectorAll('.preferences__dropdown').forEach(function (dropDownWr
 	const dropDownItems = dropDownWrapper.querySelectorAll('.preferences__dropdown-item');
 	const dropDownArrow = dropDownWrapper.querySelector('.preferences__form-arrow');
 
+
+
+	function toggleClass(item) {
+		item.classList.toggle('active');
+	}
+
+	function removeClass(item) {
+		item.classList.remove('active');
+	}
+
+	function removeClassColl() {
+		removeClass(dropDownBtn);
+		removeClass(dropDownList);
+		removeClass(dropDownArrow);
+	}
+
 	dropDownBtn.addEventListener('click', function () {
-		dropDownList.classList.toggle('active');
-		dropDownArrow.classList.toggle('active');
+		toggleClass(dropDownList);
+		toggleClass(dropDownArrow);
 		this.classList.toggle('active');
 	});
 
@@ -35,57 +120,20 @@ document.querySelectorAll('.preferences__dropdown').forEach(function (dropDownWr
 		itemList.addEventListener('click', function (e) {
 			e.stopPropagation();
 			dropDownBtn.innerText = this.innerText;
-			dropDownBtn.classList.remove('active');
-			dropDownList.classList.remove('active');
-			dropDownArrow.classList.remove('active');
+			removeClassColl();
 
 		});
 	});
 
 	document.addEventListener('click', function (e) {
 		if (e.target !== dropDownBtn) {
-			dropDownBtn.classList.remove('active');
-			dropDownList.classList.remove('active');
-			dropDownArrow.classList.remove('active');
-
+			removeClassColl();
 		}
 	});
 
 	document.addEventListener('keydown', function (e) {
 		if (e.key === 'Tab' || e.key === 'Escape') {
-			dropDownBtn.classList.remove('active');
-			dropDownList.classList.remove('active');
-			dropDownArrow.classList.remove('active');
-
+			removeClassColl();
 		}
 	});
 });
-
-//
-
-const darkChecked = document.getElementById('dark');
-const lightChecked = document.getElementById('light');
-const htmlTg = document.querySelector('html');
-
-
-
-darkChecked.addEventListener('change', function () {
-	htmlTg.removeAttribute('data-theme', 'light');
-	htmlTg.setAttribute('data-theme', 'dark');
-});
-
-lightChecked.addEventListener('change', function () {
-	htmlTg.removeAttribute('data-theme', 'dark');
-	htmlTg.setAttribute('data-theme', 'light');
-});
-
-// darkChecked.addEventListener('change', toggleAtr)
-// lightChecked.addEventListener('change', toggleAtr)
-
-
-// function toggleAtr() {
-// 	htmlTg.removeAttribute('data-theme', 'dark');
-// 	htmlTg.setAttribute('data-theme', 'light');
-// }
-
-
